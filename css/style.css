@@ -1,30 +1,70 @@
 @charset "utf-8";
 @import url(normalize.css);
-/* 웹카페 레이아웃 */
-.header, .nav, .main, .footer{
-  width: 1000px;
-  margin: 0 auto;
-  background: yellow;
+/* 박스 공통 */
+*, *::before, *::after{
+  box-sizing: border-box;
 }
-/* 헤더 */
+/* 모바일 레이아웃 */
+.header .nav .main .footer{
+  width: 100%;
+}
+/* 모바일 헤더 */
 .header {
+  background: lime;
   height: 10vh;
 }
-/* 네비게이션 */
-.nav-container {
-  background-color: #988574;
-}
+/* 모바일 네비게이션 */
 .nav {
+  background: aqua;
   height: 10vh;
 }
-/* 메인콘텐츠 */
+/* 모바일 메인 */
 .main {
-  height: 70vh;
+  background: orange;
+  height: 170vh;
 }
-/* 푸터 */
-.footer-container {
-   background-color: #988574;
-}
+/* 모바일 푸터 */
 .footer {
+  background: violet;
   height: 10vh;
 }
+
+body{
+  background-color: pink; 
+}
+
+@media screen and (min-width: 1000px){
+  /* 웹카페 데스크탑 레이아웃 */
+  .header, .nav, .main, .footer{
+    width: 1000px;
+    margin: 0 auto;
+    background: yellow;
+  }
+  /* 데스크탑 헤더 */
+  .header {
+    height: 10vh;
+    660
+  }
+  /* 데스크탑 네비게이션 */
+  .nav-container {
+    background-color: #988574;
+  }
+  .nav {
+    height: 10vh;
+  }
+  /* 데스크탑 메인콘텐츠 */
+  .main {
+    height: 70vh;
+    추천서적 320
+    트위터영역 405
+    인기 영역 235
+  }
+  /* 데스크탑 푸터 */
+  .footer-container {
+    background-color: #988574;
+  }
+  .footer {
+    height: 10vh;
+  }
+}
+
