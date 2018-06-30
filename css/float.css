@@ -1,0 +1,88 @@
+@charset "utf-8";
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+.header .main .footer{
+  width: 1000px;
+  margin: 0 auto; 
+}
+.header {
+  background: green;
+}
+/* 메인콘텐츠 레이아웃 */
+.main {
+  background: yellow;
+  /* overflow: hidden; 플로트를 가리는 역할 */
+}
+/* .main::before {
+  content: "첫번째 가상 요소 박스";
+  background: gray;
+} */
+.main::after {
+  content: "";
+  display: block;
+  clear: both; /* 강제로 영역 생김 */
+  background: gray;
+}
+
+.main > *{
+  border: 1px solid blue;
+  height: 300px;
+}
+.recommend-book {
+  width: 320px;
+  float: left;
+  margin-right: 20px;
+  background: pink;
+}
+.news {
+  width: 660px;
+  float: right;
+  background: orange;
+}
+.board {
+  width: 320px;
+  float: left;
+  background: red;
+}
+.favorite-site {
+  width: 235px;
+  float: right;
+  margin-left: 20px;
+  background: violet;
+}
+.twitter {
+  width: 405px;
+  background: skyblue;
+  float: left;
+  margin-left: 20px;
+}
+.footer {
+  background: green;
+  
+}
+
+
+
+.box {
+  width: 500px; 
+  background: yellow;
+  border: 5px solid red;
+  font-size: 30px;
+}
+.box1 {
+  background: rgba(0,255,0,0.2);
+  float: right;
+}
+.box3 {
+  background: rgba(255,0,0,0.5);
+  float: right;
+}
+.box4 {
+  background: pink;
+  width: 300px;
+  float: left;
+}
+.box2 {
+  background: rgba(0,0,255,0.5);
+}
