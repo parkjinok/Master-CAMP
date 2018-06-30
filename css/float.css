@@ -24,11 +24,10 @@
   clear: both; /* 강제로 영역 생김 */
   background: gray;
 }
-
-.main > *{
+/*.main > *{
   border: 1px solid blue;
   height: 300px;
-}
+} */
 .recommend-book {
   width: 320px;
   float: left;
