@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>form 관련 요소</title>
 </head>
 
 <body>
   <h1>form 요소에 관하여...</h1>
-  <form id="form" action="https://formspree.io/jewew2@gmail.com" method="POST">
+  <form id="form1" action="https://formspree.io/seulbinim@gmail.com" method="POST">
     <fieldset>
       <legend>폼 서식</legend>
       <p>
@@ -24,22 +24,22 @@
       <p>
         성별
         <br>
-        <label for="female">여자</label>
         <input type="radio" id="female" value="여자" name="gender" checked>
-        <label for="male">남자</label>
+        <label for="female">여자</label>
         <input type="radio" id="male" value="남자" name="gender">
+        <label for="male">남자</label>
       </p>
       <p>
         관심분야
         <br>
-        <label for="html">html</label>
         <input type="checkbox" id="html" value="HTML" name="programing" checked>
-        <label for="css">css</label>
+        <label for="html">HTML</label>
         <input type="checkbox" id="css" value="CSS" name="programing" checked>
+        <label for="css">CSS</label>
       </p>
       <p>
         <label for="user-email">이메일</label>
-        <input type="email" name="email" id="user-email" required>
+        <input type="email" id="user-email" name="email" required>
       </p>
       <p>
         <label for="">전화번호</label>
@@ -50,7 +50,7 @@
         <input type="month" id="calender" name="calender">
       </p>
       <p>
-        <input type="search" autofocus list="search-suggestions" placeholder="목록에서 선택하세요">
+        <input type="search" autofocus list="search-suggestions" placeholder="목록에서 선택하세요" />
         <datalist id="search-suggestions">
           <option label="DM" value="Depeche Mode"></option>
           <option label="Moz" value="Morrissey"></option>
@@ -59,24 +59,24 @@
         </datalist>
       </p>
       <p>
-        <label for="">포트폴리오 url</label>
-        <input type="url" id="url" name="earl" required />
+        <label for="">포트폴리오 URL</label>
+        <input type="url" id="url" name="portfolio" required />
       </p>
       <p>
-        <label for="">주문수량</label>
-        <input type="number" min="5" max="100" step="5" id="Order" />
+        <label for="order">주문수량</label>
+        <input type="number" min="5" max="100" step="5" id="order">
       </p>
       <p>
         <label for="service">추천 서비스</label>
-        <select name="service" id="service">
-          <option value="무료배송">무료배송</option>
-          <option value="사은품증정">사은품증정</option>
-          <option value="이벤트응모">이벤트응모</option>
+        <select id="service" name="service">
+          <option value="무료 배송">무료 배송</option>
+          <option value="사은품 증정">사은품 증정</option>
+          <option value="이벤트 응모">이벤트 응모</option>
         </select>
       </p>
       <p>
-        <label for="message">문의사항</label>
-        <textarea name="" id="message" cols="30" rows="10" placeholder="문의하실 내용을 입력해 주세요."></textarea>
+        <label for="message">문의 사항</label><br>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="문의사항을 남겨주세요"></textarea>
       </p>
       <button type="submit">전송</button>
       <button type="reset">초기화</button>

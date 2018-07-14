@@ -1,31 +1,33 @@
 @charset "utf-8";
+
 .note{
   width: 560px;
-  background: blue;  
+  background: blue;
 }
 .box1{
-  width: 500px;
+width: 500px;
   padding: 20px;
-  border: 5px solid black;
+  border: 5px solid #000;  
   background: yellow;
   position: relative;
   top: -5px;
   left: -5px;
 }
-.note2{background: red;
+.note2{
+  background: red;
   height: 200px;
   width: 600px;
   position: relative;
 }
 .box2{
-  background: green;
+  background: lime;
   width: 300px;
   height: 50px;
-  /* margin: 0; */
+  /* margin: auto; */
   position: absolute;
   bottom: 0;
   right: 0;
-  top: 0;
+  top:0;
   left: 0;
 }
 .fix{
@@ -37,10 +39,10 @@
   top: 50px;
   right: 50px;
 }
-.stick{
+.stic{
   background: orange;
   margin: 0;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 }
