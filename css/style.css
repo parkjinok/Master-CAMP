@@ -165,6 +165,7 @@ input[name="search"]{
   /* 모바일 안내링크 */
   .member{
     display: flex;
+    justify-content: flex-end;
     background: #988574;
     margin: 0 -20px;
     order: -1;
