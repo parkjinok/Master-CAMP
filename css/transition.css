@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 500ms 0 cubic-bezier(.07,.26,.84,-0.92)
+  transition: border-radius 500ms 0 ease, background 1000ms 500ms ease-in, transform 500ms 1000ms ease-in-out;
   /* transition-property: border-radius, background, transform;
   transition-duration: 500ms, 1000ms, 500ms;
   transition-delay: 0ms, 500ms, 1000ms;
