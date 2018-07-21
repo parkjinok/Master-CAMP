@@ -307,9 +307,24 @@ input[name="search"]{
   /* 데스크탑 내비게이션 */
   .nav-container {
     background-color: #988574;
+    box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.85), 0 2px 5px 0 rgba(0,0,0,0.85); /* 위 아래 라인에 블러 효과 */
   }
   .navigation {
-  
+    
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 20px 0;
+  }
+  .menu-item-text {
+    font-size: 1.8rem;
+    font-family: 'Noto Sans Bold';
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000; /* 사방으로 그림자값 이동=글자 테두리형태로 생김, 셰도우로 한방향 그라데이션도 가능 */
+  } 
+  .sub-menu li {
+    margin: 10px 0 0 20px;
   }
   /* 데스크탑 메인 콘텐츠 */
   .main {
