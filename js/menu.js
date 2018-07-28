@@ -6,6 +6,11 @@
 //   });
 // // });
 
+//리사이징 시 버튼 보이도록 하기-재  설정하기 
+//$(window.resize(function(){
+ // location.reload();
+//}
+
 
 var viewport = window.matchMedia('(max-width: 999px)');
   if(viewport.matches){  //뷰포트에 있는 값이 매칭되면
