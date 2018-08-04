@@ -1,0 +1,34 @@
+@charset "utf-8";
+@keyframes text1{
+  from{
+    background: yellow;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap; /* 줄바꿈 금지 */
+  }
+  50%{
+    background: green;
+  }
+  to{
+    background: pink;
+    width: 100%;
+  }
+}
+.text1{
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  padding: 20px;
+  background: yellow;
+  transition: all 5000ms;
+  /* animation-name: text1;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards; 
+  animation-delay: 2s;
+  animation-iteration-count: infinite; 무한반복 
+  animation-direction: alternate;  정방향 - 역방향 왔다갔따 부드럽게 자연스럽게 
+  animation-timing-function: ease-in-out; 속도 가속 감속 조절 */
+  animation: text1 3000ms forwards 2s infinite alternate ease-in-out; /* 단축표기법 */
+}
+/* .text1:hover{
+  background: pink;
+} */
