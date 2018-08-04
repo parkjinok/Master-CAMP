@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>테이블만들기</title> 
+  <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+  <h1>테이블 관련요소</h1>
+  <p id="t-summary">
+    테이블에 관련한 자세한 설명을 입력합니다. 
+  </p>
+  <table aria-describedby="t-summary"> <!-- 접근성 관련 aria 코드 삽입 -->
+    <caption>대표하는 제목</caption>
+    <tr>
+      <th scope="col">이름</th>
+      <th scope="col">국어</th>
+      <th scope="col">영어</th>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>100</td>
+      <td>90</td>
+    </tr>
+  </table>
+</body>
+</html>
