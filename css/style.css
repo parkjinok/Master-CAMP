@@ -224,7 +224,7 @@ input[name="search"]{
 .favorite-site-list{
   margin-top: 20px;
   overflow: hidden;  /* 리스트 숫자 가리기 위함 */
-  counter-reset: 0;
+  counter-reset: number;
 }
 .favorite-site-list li{
   counter-increment: number;
