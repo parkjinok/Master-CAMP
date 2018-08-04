@@ -622,18 +622,17 @@ input[name="search"]{
   }
   /* 데스크탑 슬로건 */
   .slogan{
-    background: yellow;
+    position: relative;
   }
   .slogan-heading{
     width: 110px;
     height: 83px;
-    background: pink;
     position: absolute;
     left: 35px;
     bottom: -25px;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
   }
   .slogan-heading::after{
     content: "";
