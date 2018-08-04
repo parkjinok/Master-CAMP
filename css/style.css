@@ -122,6 +122,10 @@ input[name="search"]{
   padding: 5px 5px 5px 10px;
 }
 /* 공통 메인 */
+/* 공통 메인 섹션 */
+.main > section{
+  margin-top: 20px;
+}
 /* 공통 메인 섹션 제목 */
 .section-heading{
   font-size: 1.3em;
@@ -182,10 +186,7 @@ input[name="search"]{
   font-size: 1.8em;
   color: #abd375;
 }
-.recommend-book-summary{
-
-}
-/* 공통 새소식 */
+/*공통 새소식 */
 .news-container{
   margin: 20px 0;
 }
@@ -194,14 +195,88 @@ input[name="search"]{
   text-align: right;
   line-height: 10px;
 }
-.board{
-  background: skyblue;
+/* 공통 게시판 */
+.board {
+  position: relative;
 }
-.favorite-site{
-  background: teal;
+.board-list{
+  margin-top: 20px;
 }
+.board-list li{
+  display: flex;
+  justify-content: space-between;
+}
+.board-list a{
+  width: calc(100% - 100px); /* 크롬에서 왜 안먹지? 추후 점검하기 */
+  white-space: nowrap; /* block모델 일때만 사용 가능 */
+  overflow: hidden; /* 내가 정한 사이즈 내에서만 보여줘 */
+  text-overflow: ellipsis; /* 텍스트 말줄임표  세가지가 함께 쓰였을때 효과가 나타남 */ 
+}
+.board-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board-more::before{
+  color: hsla(100, 50%, 60%, 1);
+}
+/* 공통 인기사이트 */
+.favorite-site-list{
+  margin-top: 20px;
+  overflow: hidden;  /* 리스트 숫자 가리기 위함 */
+  counter-reset: 0;
+}
+.favorite-site-list li{
+  counter-increment: number;
+  margin-top: 10px;
+}
+.favorite-site-list li::before{
+  content: counter(number,decimal); /* 모든 리스트 앞에 로마자 1234로 표시해라 */
+  background-color: #eea60a;
+  color: #fff;
+  padding: 0 .5em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+/* 공통 트위터 */
 .twitter{
-  background: tomato;
+  
+}
+.twitter-wrap{
+  position: relative;
+  padding-right: 25%;
+  /* min-height: 25%;  내용이 동적으로 바뀔 수 있으므로 높이 고정값 지정 */
+}
+.twitter-user-info{
+  margin-top: 20px;
+}
+.twitter-user-name, .twitter-user-id{
+  display: inline;
+}
+.twitter-user-name{
+  color: #6aae66;
+}
+.twitter-user-id{
+  font-weight: bold;
+}
+.twitter-profile{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  padding-left: 1em;
+}
+.twitter-thumbnail{
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 50%;
+}
+.twitter-summary{
+  margin: 10px 0;
+}
+.twitter-date{
+  display: block;
+  text-align: right; 
 }
 /* 공통 푸터 */
 .footer{
@@ -368,11 +443,18 @@ input[name="search"]{
   .main {
     display: flex;
     flex-direction: column;
-
+    padding: 0 20px;
   }
   /* 모바일 추천서적 */
   .recommend-book-cover{ /* 영역에서 이미지 70%로 보여지게 */
     width: 70%;
+  }
+  /* 모바일 트위터 */
+  .twitter-wrap{
+    min-height: 125px;
+  }
+  .twitter-profile{
+    text-align: 
   }
   /* 모바일 푸터 */
 }
@@ -513,13 +595,18 @@ input[name="search"]{
     flex-basis: 660px;
   }
   .board{
-    flex-basis: 320px;
+    width: 320px;
+    /* flex-basis: 320px; white-space사용할 경우 플렉스 베이시스 사용할 수 없음 */
   }
   .favorite-site{
     flex-basis: 235px;
+    order: 1;
   }
   .twitter{
     flex-basis: 405px;
+  }
+  .twitter-wrap{
+    min-height: 100px;
   }
 
 
