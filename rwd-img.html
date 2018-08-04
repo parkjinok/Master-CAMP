@@ -12,16 +12,12 @@
   <div class="rwd-img-container">
     <img src="images/book_rwd.jpg" alt="" class="rwd-img">
   </div>
-  <!-- 모바일 해상도에 맞게 이미지 적용되는 경우 -->
+  <!-- 모바일 해상도에 맞게 이미지 적용되는 경우 :srcset 지원하지 않는 브라우저는 1이미지 하나만 적용됨 -->
   <div class="rwd-img-container">
     <img src="images/image-1x.png" alt="" class="rwd-img"
          srcset="images/image-1x.png 1x, images/image-2x.png 2x, image-3x.png 3x, images/image-4x.png 4x">
   </div>
-  <!-- 뷰포트 가로 기준 사이즈에 맞게 불러오는 이미지 다르게 -->
-  <div class="rwd-img-container">
-    <img src="images/normal.jpg" alt="" class="rwd-img"
-         srcset="images/large.jpg 1024w, images/medium.jpg 800w, images/small.jpg 480w">
-  </div>
+  
   <div class="rwd-img-container">
     <picture>
       <source srcset="images/large.jpg" media="(min-width: 1000px)">
@@ -30,5 +26,9 @@
       <img src="images/normal.jpg" alt="" class="rwd-img"> <!-- 부모가 작아질때 이미지도 작아지게 클래스는 이미지 태그에 넣는다. 익스11불가 -->
     </picture>
   </div>  
+  <!-- 뷰포트 가로 기준 사이즈에 맞게 불러오는 이미지 : 같은 이미지 다른 크기의 이미지를 해상도에 최적화 된 이미지 사이즈로 불러옴 -->
+  <div class="rwd-img-container">
+    <img src="images/normal.jpg" alt="" class="rwd-img" srcset="images/large.jpg 1024w, images/medium.jpg 800w, images/small.jpg 480w">
+  </div>
   </body>
 </html>
